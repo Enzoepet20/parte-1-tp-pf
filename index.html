@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Técnico Superior - ITS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="icon" href="./assets/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="./assets/img/logo_its.jpg" alt="Logo ITS" width="100px" height="100px">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="hero">
+                <div class="overlay">
+                    <div class="content">
+                        <h1>Instituto Técnico Superior</h1>
+                        <p>EDUCACION PUBLICA AL ALCANCE DE TODOS</p>
+                        <p class="">En el corazón de Cipolletti, el Instituto Técnico Superior se erige como un faro educativo para quienes desean transformar su pasión por la tecnología en una carrera profesional sólida. Ofrecemos una formación integral en programación, adaptada a las demandas del mercado laboral actual, brindando a nuestros estudiantes las herramientas necesarias para destacarse en el dinámico mundo del desarrollo de software. Con un enfoque práctico y actualizado, preparamos a futuros profesionales capaces de enfrentar los desafíos tecnológicos con creatividad e innovación. ¡Únete a nuestra comunidad y sé parte de la próxima generación de programadores que impulsarán el cambio!</p>
+                        <button id="inscribete">Inscribite</button>
+                    </div>
+                </div>
+                <img src="assets/img/example.jpg" alt="Coding">
+            </section>
+            <section id="about" class="general ">
+                <h2>Sobre Nosotros</h2>
+                <h3 class="">Desde el 10 de abril de 2017</h3>
+                <p>Promovemos la <strong>innovación</strong> y <strong>construcción de habilidades</strong>, 
+                    estableciéndonos como una <em>alternativa de educación superior de alta calidad</em>.</p>
+                <ul>
+                  <li><p>El sello que distingue nuestra oferta educativa es la <strong>manera de aprender</strong>, 
+                    que se lleva a cabo mediante <strong>clases prácticas</strong>, laboratorios, 
+                    <strong>prácticas profesionalizantes</strong> y <strong>clases virtuales</strong>, 
+                    generando un ambiente de constantes desafíos.</p></li>
+                  <li>                
+                    <p>La <strong>educación técnica superior</strong> tiene como <strong>MISIÓN</strong> 
+                    la formación de técnicos superiores con habilidades, competencias y capacidades de alto nivel 
+                    adecuadas a las demandas sociales, los avances científicos, tecnológicos y a los 
+                    requerimientos productivos.</p>
+                </li>
+                </ul>
+              </section>
+        
+            <section id="courses" class="general">
+                <h2>Nuestros Cursos</h2>
+                <p>Explora nuestros programas de formación técnica en programación, desarrollo de software...</p>
+                <div class="courses-list">
+                    <div class="course">
+                        <h3>Técnico Superior en Desarrollo de Software Full Stack</h3>
+                        <p>Un “full stack developer” es un programador con un perfil técnico muy completo que conoce bien tanto lo referente a backend como lo referente a frontend.</p>
+                    </div>
+                    <div class="course">
+                        <h3>Técnico Superior en DevOps</h3>
+                        <p>Un egresado de la carrera de DevOps es un profesional capacitado para automatizar, integrar y optimizar los procesos de desarrollo de software y operaciones de TI.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="contact" class="contact-section">
+                <h2>Contacto</h2>
+                <p>Puedes contactarnos a través del siguiente formulario. Nos encantaría saber de ti.</p>
+                
+                <form action="enviar_contacto.php" method="POST" class="contact-form">
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tuemail@dominio.com" required>
+                        
+                        <label for="phone">Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ej: +54 9 299 1234567">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Tu Mensaje</legend>
+                        
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Breve descripción" required>
+                        
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </fieldset>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </section>
+            
+        </main>
+        
+    <footer>
+        <p>© 2024 Instituto Técnico Superior Cipolletti - Todos los derechos reservados</p>
+        <div class="social-icons">
+            <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

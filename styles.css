@@ -1,0 +1,417 @@
+:root {
+    --primary-color: #0a74da;
+    --secondary-color: #333;
+    --accent-color: #2a9d8f;
+    --font-color: hsl(0, 0%, 100%);
+    --font-family: 'Poppins', sans-serif;
+    --gradient-bg: linear-gradient(135deg, #0a74da, #004d40);
+    --primary-gradient: linear-gradient(270deg, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background: var(--primary-gradient);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-image: url('assets/img/background.jpg');
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    color: var(--font-color);
+}
+
+#hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Agrega una capa de oscurecimiento */
+    padding: 2rem;
+    max-width: 40%;
+}
+
+#hero .content {
+    max-width: 600px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    animation: slideIn 2s ease-out;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+#hero button {
+    padding: 10px 20px;
+    background-color: #7FFF00; /* color verde */
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#hero button:hover {
+    background-color: #66CC00; /* color verde oscuro */
+}
+
+#hero img {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 20px; 
+}
+
+.social-icons a {
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 24px; /
+}
+
+.social-icons a:hover {
+    color: #ffdd57;
+}
+
+header {
+    background: var(--gradient-bg); /* Mantén el degradado */
+    padding: 10px 20px; /* Reducir el padding para un navbar más delgado */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+    margin-right: 20px;
+}
+.logo img {
+    width: 70px; /* Ajustar tamaño de la imagen si es necesario */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    color: var(--font-color); /* Asegura que el texto sea visible sobre el degradado */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ffdd57; /* Color de hover */
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    color: var(--font-color); /* Asegura visibilidad en todos los dispositivos */
+}
+
+.general p {
+    transition: transform 0.3s ease-in-out;
+    font-size: 20px;
+  }
+  
+  .general p:hover {
+    transform: translateX(5px);
+  }
+  
+.general {
+    margin-left: 20px;
+  }
+  
+  .general h2 {
+    background: linear-gradient(to bottom, #00008B, #00004D); /* Azul marino oscuro a claro */
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #fff; /* Blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco transparente */
+    padding: 10px 20px; /* Espacio interno */
+}
+
+.general h3 {
+    background: linear-gradient(to bottom, #6e6ef3, #0404b1); /* Azul marino oscuro a claro */
+    font-family: inherit;
+    font-size: 24px;
+    color: #f0f0f0; /* Gris claro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco transparente */
+    padding: 10px 20px; /* Espacio interno */
+}
+  
+  .general ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.contact-form label {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-btn {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos generales */
+@media (max-width: 1200px) {
+    #hero {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #hero .overlay {
+        max-width: 80%;
+    }
+
+    #hero .content {
+        max-width: 90%;
+    }
+
+    #hero img {
+        max-width: 80%;
+    }
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    #hero button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-form fieldset {
+        padding: 15px;
+    }
+
+    .contact-form .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 0.5rem;
+    }
+
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.8rem;
+    }
+
+    #hero button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .general {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .general h2,
+    .general h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section {
+        padding: 10px;
+    }
+
+    .contact-form fieldset {
+        padding: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
